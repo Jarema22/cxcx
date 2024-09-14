@@ -10,7 +10,8 @@ def Send_Email(massage):
     port = 465
     username = "python.test.app228@gmail.com"
 
-    password = os.getenv("PAS")
+    password = "yfbk qqnf zwsn yznq"
+
     receiver = "python.test.app228@gmail.com"
     context = ssl.create_default_context()
     print(massage)
