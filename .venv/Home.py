@@ -8,7 +8,7 @@ st.set_page_config(layout="wide")
 col1 ,col2 =st.columns(2)
 
 with col1:
-    st.image("/home/stranger/Documents/python/app1/pythonProject1/images/among-us-5825180_1280.jpg", width=600)
+    st.image("images/among-us-5825180_1280.jpg", width=600)
 with col2:
     st.title("Panio Jarema")
     content = """
@@ -22,12 +22,12 @@ st.write(content1)
 
 col3, empty_col, col4 = st.columns([1.5, 1.0, 1.5])
 
-df = pandas.read_csv("/home/stranger/Documents/python/app1/pythonProject1/.venv/data (2).csv", sep=";")
+df = pandas.read_csv(".venv/data (2).csv", sep=";")
 with col3:
     for index, row in df[:10].iterrows():
         st.header(row["title"])
         st.write(row['description'])
-        st.image("/home/stranger/Documents/python/app1/pythonProject1/images/" + row['image'])
+        st.image("images/" + row['image'])
         st.write(f"[Source Code]({row['url']})")
 
 
@@ -35,5 +35,5 @@ with col4:
     for index, row in df[10:].iterrows():
         st.header(row["title"])
         st.write(row['description'])
-        st.image("/home/stranger/Documents/python/app1/pythonProject1/images/" + row['image'])
+        st.image("images/" + row['image'])
         st.write(f"[Source Code]({row['url']})")
